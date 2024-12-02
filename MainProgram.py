@@ -91,6 +91,7 @@ buku_list = [
     Buku("Sang Pemimpi", "Andrea Hirata"),
     Buku("Tenggelamnya Kapal Van der Wijck", "Hamka"),
     Buku("Arah Langkah", "Fiersa Besari")
+    Buku("Tapak Jejak", "Fiersa Besari")
 ]
 
 admin = Admin()
