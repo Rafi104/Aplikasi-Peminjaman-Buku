@@ -61,7 +61,7 @@ def welcome_message():
     print("        Selamat datang di Perpustakaan Pintar! ")
     print("===================================================")
 
-buku_list = [
+buku_list = []
     # Kategori Komik
     Buku("Naruto: Volume 1", "Masashi Kishimoto"),
     Buku("One Piece: East Blue", "Eiichiro Oda"),
