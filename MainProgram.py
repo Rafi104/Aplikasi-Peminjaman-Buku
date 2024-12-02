@@ -4,9 +4,9 @@ from datetime import datetime, timedelta
 
 # Kelas Mahasiswa, Buku, Peminjaman, dan Admin
 class Mahasiswa:
-    def __init__(self, nama, nim):
+    def __init__(self, nama, asal_fakultas):
         self.nama = nama
-        self.nim = nim
+        self.asal_fakultas = asal_fakultas
 
 class Buku:
     def __init__(self, judul, penulis):
@@ -28,7 +28,7 @@ class Peminjaman:
     def info_peminjaman(self):
         print("\n--- Info Peminjaman ---")
         print(f"Nama Mahasiswa: {self.mahasiswa.nama}")
-        print(f"NIM: {self.mahasiswa.nim}")
+        print(f"Asal Fakultas: {self.mahasiswa.asal_fakultas}")
         print(f"Judul Buku: {self.buku.judul}")
         print(f"Penulis Buku: {self.buku.penulis}")
         print(f"Tanggal Peminjaman: {self.tanggal_pinjam.strftime('%Y-%m-%d')}")
@@ -61,7 +61,7 @@ def welcome_message():
     print("        Selamat datang di Perpustakaan Pintar! ")
     print("===================================================")
 
-buku_list = []
+buku_list = [
     # Kategori Komik
     Buku("Naruto: Volume 1", "Masashi Kishimoto"),
     Buku("One Piece: East Blue", "Eiichiro Oda"),
@@ -91,7 +91,6 @@ buku_list = []
     Buku("Sang Pemimpi", "Andrea Hirata"),
     Buku("Tenggelamnya Kapal Van der Wijck", "Hamka"),
     Buku("Arah Langkah", "Fiersa Besari")
-    Buku("Tapak Jejak", "Fiersa Besari")
 ]
 
 admin = Admin()
@@ -169,8 +168,8 @@ def aplikasi_peminjaman():
             return
 
         nama = input("Masukkan Nama Anda: ")
-        nim = input("Masukkan NIM Anda: ")
-        mahasiswa = Mahasiswa(nama, nim)
+        asal_fakultas = input("Masukkan Asal Fakultas Anda: ")
+        mahasiswa = Mahasiswa(nama, asal_fakultas)
 
         konfirmasi = input(f"Apakah Anda yakin ingin meminjam buku '{buku.judul}' oleh {buku.penulis}? (ya/tidak): ").lower()
         if konfirmasi != "ya":
