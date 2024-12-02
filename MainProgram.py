@@ -90,7 +90,7 @@ buku_list = [
     Buku("The Great Gatsby", "F. Scott Fitzgerald"),
     Buku("Sang Pemimpi", "Andrea Hirata"),
     Buku("Tenggelamnya Kapal Van der Wijck", "Hamka"),
-    Buku("Arah Langkah", "Fiersa Besari")
+    Buku("Arah Langkah", "Fiersa Besari"),
     Buku("Tapak Jejak", "Fiersa Besari")
 ]
 
