@@ -90,7 +90,12 @@ buku_list = [
     Buku("The Great Gatsby", "F. Scott Fitzgerald"),
     Buku("Sang Pemimpi", "Andrea Hirata"),
     Buku("Tenggelamnya Kapal Van der Wijck", "Hamka"),
+<<<<<<< HEAD
     Buku("Arah Langkah", "Fiersa Besari")
+=======
+    Buku("Arah Langkah", "Fiersa Besari"),
+    Buku("Tapak Jejak", "Fiersa Besari")
+>>>>>>> 18e8ebf44b5312a8862cf6698f873e9a9ada0f63
 ]
 
 admin = Admin()
