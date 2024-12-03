@@ -41,7 +41,7 @@ class PerpustakaanPintar:
                 "Dragon Ball: Z Saga", "Attack on Titan: Volume 1",
                 "Doraemon: Petualangan", "My Hero Academia",
                 "Demon Slayer", "Jujutsu Kaisen", "Slamdunk, Haikyuu",
-                "Crayoon Shinchan"
+                "Crayon Shinchan"
             ],
             "Pelajaran": [
                 "Kalkulus dan Geometri", "Analitis", "Fisika Dasar", 
