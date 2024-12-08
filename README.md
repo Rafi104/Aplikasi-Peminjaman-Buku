@@ -19,4 +19,5 @@ Peminjaman buku perpustakaan adalah platform yang memudahkan pengguna untuk menc
 # Flowchart
 ![flowchart perpustakaan drawio](https://github.com/user-attachments/assets/bb8772ca-fbc4-4088-a884-9e989ccbd1ab)
 # Site Map
-![Uploading Welcome Page.png…]()
+![Welcome Page](https://github.com/user-attachments/assets/c671a395-0ca9-47c8-92fa-4acc5d0f269d)
+
