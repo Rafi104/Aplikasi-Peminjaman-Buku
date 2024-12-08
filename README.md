@@ -16,3 +16,5 @@ Peminjaman buku perpustakaan adalah platform yang memudahkan pengguna untuk menc
 2. Kategori Buku
 3. Peminjaman Buku
 4. Pengembalian Buku
+# Flowchart
+![flowchart perpustakaan drawio](https://github.com/user-attachments/assets/bb8772ca-fbc4-4088-a884-9e989ccbd1ab)
