@@ -12,4 +12,4 @@ def write_user(username, password, name):
     users = read_users()
     new_user = pd.DataFrame({"username": [username], "password": [password], "name": [name]})
     users = pd.concat([users, new_user], ignore_index=True)
-    users.to_csv("user.csv", index=False)
+    users.to_csv("user.csv", index=False))
