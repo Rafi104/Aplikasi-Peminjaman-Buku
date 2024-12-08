@@ -2,7 +2,7 @@
 # Anggota Kelompok:
 1. Rafi Andhika Dwi Permana (I0324023)
 2. Ryan Hafidz Setiyawan (I0324025)
-3. Via Dian Restuana (I0324026
+3. Via Dian Restuana (I0324026)
 # Deskripsi
 Peminjaman buku perpustakaan adalah platform yang memudahkan pengguna untuk mencari, meminjam, mendata, dan mengembalikan buku yang kita pinjam secara online.
 1. mahasiswa memasukkan identitas berupa data kartu pelajar ke dalam aplikasi peminjaman buku
@@ -16,3 +16,14 @@ Peminjaman buku perpustakaan adalah platform yang memudahkan pengguna untuk menc
 2. Kategori Buku
 3. Peminjaman Buku
 4. Pengembalian Buku
+# Flowchart
+![flowchart perpustakaan drawio](https://github.com/user-attachments/assets/bb8772ca-fbc4-4088-a884-9e989ccbd1ab)
+# Site Map
+![Welcome Page (1)](https://github.com/user-attachments/assets/39dc2f3f-8a2d-48ef-926d-5b2010ac7f63)
+
+
+# Library
+- Tkinter
+- Pandas
+- Pillow
+
