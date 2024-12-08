@@ -26,5 +26,4 @@ Peminjaman buku perpustakaan adalah platform yang memudahkan pengguna untuk menc
 - Tkinter
 - Pandas
 - Pillow
-- os
-- hashlib
+
