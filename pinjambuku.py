@@ -4,7 +4,7 @@ from Main import show_frame
 from Book import create_home_menu
 from datetime import datetime  # Import datetime untuk mendapatkan tanggal peminjaman
 
-def create_borrow_book_frame(parent, frame, csv_file="E:\\Aplikasi Peminjaman Buku\\Aplikasi Peminjaman Buku\\data_buku.csv"):
+def create_borrow_book_frame(parent, frame, csv_file="data_buku.csv"):
     from Book import book_status, books_by_category
     """Buat frame untuk daftar buku yang bisa dipinjam."""
     selected_category = tk.StringVar()  # Deklarasikan sebagai StringVar

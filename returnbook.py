@@ -4,7 +4,7 @@ from datetime import datetime
 from Book import books_by_category, book_status, save_books_to_csv
 from Main import show_frame
 
-csv_file = r"E:\Aplikasi Peminjaman Buku\Aplikasi Peminjaman Buku\data_buku.csv"
+csv_file = r"C:\Users\Rafi\Documents\Tubes prokom\Aplikasi-Peminjaman-Buku\data_buku.csv"
 
 def borrow_book(selected_book, csv_file):
     """Fungsi untuk meminjam buku yang dipilih dan mencatat tanggal peminjaman."""

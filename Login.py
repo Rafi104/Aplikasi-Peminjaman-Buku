@@ -32,7 +32,7 @@ def register(name_entry, username_entry, password_entry, parent,frame):
 
     write_user(username, password, name)
     messagebox.showinfo("Sukses", "Pendaftaran berhasil!")
-    show_frame(parent,create_login_frame(parent,frame))
+    show_frame(parent,create_login_frame(parent,))
 
 
 # Fungsi untuk login

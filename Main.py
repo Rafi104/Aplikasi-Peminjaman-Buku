@@ -15,7 +15,7 @@ def show_frame(parent, frame):
 def main():
     global csv_file
     # Menentukan path ke file CSV
-    csv_file = r"E:\Aplikasi Peminjaman Buku\Aplikasi Peminjaman Buku\data_buku.csv"
+    csv_file = r"C:\Users\Rafi\Documents\Tubes prokom\Aplikasi-Peminjaman-Buku\data_buku.csv"
     load_books_from_csv(csv_file)  # Memuat data buku
 
     # Membuat window utama

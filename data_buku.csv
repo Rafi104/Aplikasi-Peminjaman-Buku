@@ -1,12 +1,12 @@
 judul_buku,kategori,status
-Naruto,komik,Tidak Tersedia
+Naruto,komik,Tersedia
 One Piece,komik,Tersedia
-Doraemon,komik,Tidak Tersedia
-Attack on Titan,komik,Tidak Tersedia
+Doraemon,komik,Tersedia
+Attack on Titan,komik,Tersedia
 Death Note,komik,Tersedia
 Harry Potter,novel,Tersedia
 To Kill a Mockingbird,novel,Tersedia
-The Great Gatsby,novel,Tidak Tersedia
+The Great Gatsby,novel, Tersedia
 Pride and Prejudice,novel,Tersedia
 1984,novel,Tersedia
 Matematika Dasar,pelajaran,Tersedia
