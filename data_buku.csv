@@ -1,0 +1,31 @@
+judul_buku,kategori,status
+Naruto,komik,Tidak Tersedia
+One Piece,komik,Tersedia
+Doraemon,komik,Tidak Tersedia
+Attack on Titan,komik,Tidak Tersedia
+Death Note,komik,Tersedia
+Harry Potter,novel,Tersedia
+To Kill a Mockingbird,novel,Tersedia
+The Great Gatsby,novel,Tidak Tersedia
+Pride and Prejudice,novel,Tersedia
+1984,novel,Tersedia
+Matematika Dasar,pelajaran,Tersedia
+Fisika untuk Pemula,pelajaran,Tersedia
+Kimia Organik,pelajaran,Tersedia
+Sejarah Dunia,pelajaran,Tersedia
+Bahasa Inggris Dasar,pelajaran,Tersedia
+Python Programming,teknologi,Tersedia
+Machine Learning for Dummies,teknologi,Tersedia
+Artificial Intelligence,teknologi,Tersedia
+Web Development Basics,teknologi,Tersedia
+Cybersecurity Essentials,teknologi,Tersedia
+Healthy Living,kesehatan,Tersedia
+Panduan Gizi Seimbang,kesehatan,Tersedia
+Yoga untuk Pemula,kesehatan,Tersedia
+Mengenal Penyakit Umum,kesehatan,Tersedia
+Kebugaran Harian,kesehatan,Tersedia
+Manajemen Waktu,bisnis,Tersedia
+Kiat Sukses Berwirausaha,bisnis,Tersedia
+Investasi untuk Pemula,bisnis,Tersedia
+Strategi Digital Marketing,bisnis,Tersedia
+Pengembangan Karier,bisnis,Tersedia
