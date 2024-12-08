@@ -21,7 +21,7 @@ def main():
     # Membuat window utama
     root = tk.Tk()
     root.title("Aplikasi Perpustakaan Pintar")
-    root.geometry("1550x1080")
+    root.geometry("1650x1080")
     root.configure(bg="#E0E0E0")
 
     # Inisialisasi frame pertama (login)

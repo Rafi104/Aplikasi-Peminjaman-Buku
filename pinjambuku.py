@@ -134,7 +134,7 @@ def create_borrow_book_frame(parent, frame, csv_file="E:\\Aplikasi Peminjaman Bu
         width=25,
         height=2,
         cursor="hand2",
-        command=lambda: show_frame(parent, create_home_menu(parent))
+        command=lambda: show_frame(parent, create_home_menu(parent,frame))
     ).pack(pady=20)
 
     return frame

@@ -51,7 +51,7 @@ def add_hover_effect(button):
 
 # Fungsi untuk membuat menu utama
 # Fungsi untuk membuat menu utama
-def create_home_menu(parent):
+def create_home_menu(parent,frame):
     from pinjambuku import create_borrow_book_frame
     from Main import show_frame
     from returnbook import create_return_book_frame

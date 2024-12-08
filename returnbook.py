@@ -178,7 +178,7 @@ def create_return_book_frame(parent, container):  # Ganti frame ke container
         width=25,
         height=2,
         cursor="hand2",
-        command=lambda: show_frame(parent, create_home_menu(parent))
+        command=lambda: show_frame(parent, create_home_menu(parent,frame))
     ).pack(pady=20)
 
     update_book_list()
