@@ -21,3 +21,9 @@ Peminjaman buku perpustakaan adalah platform yang memudahkan pengguna untuk menc
 # Site Map
 ![Welcome Page](https://github.com/user-attachments/assets/c671a395-0ca9-47c8-92fa-4acc5d0f269d)
 
+# Library
+- Tkinter
+- Pandas
+- Pillow
+- os
+- hashlib
