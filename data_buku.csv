@@ -1,31 +1,45 @@
-judul_buku,kategori,status
-Naruto,komik,Tersedia
-One Piece,komik,Tersedia
-Doraemon,komik,Tersedia
-Attack on Titan,komik,Tersedia
-Death Note,komik,Tersedia
-Harry Potter,novel,Tersedia
-To Kill a Mockingbird,novel,Tersedia
-The Great Gatsby,novel, Tersedia
-Pride and Prejudice,novel,Tersedia
-1984,novel,Tersedia
-Matematika Dasar,pelajaran,Tersedia
-Fisika untuk Pemula,pelajaran,Tersedia
-Kimia Organik,pelajaran,Tersedia
-Sejarah Dunia,pelajaran,Tersedia
-Bahasa Inggris Dasar,pelajaran,Tersedia
-Python Programming,teknologi,Tersedia
-Machine Learning for Dummies,teknologi,Tersedia
-Artificial Intelligence,teknologi,Tersedia
-Web Development Basics,teknologi,Tersedia
-Cybersecurity Essentials,teknologi,Tersedia
-Healthy Living,kesehatan,Tersedia
-Panduan Gizi Seimbang,kesehatan,Tersedia
-Yoga untuk Pemula,kesehatan,Tersedia
-Mengenal Penyakit Umum,kesehatan,Tersedia
-Kebugaran Harian,kesehatan,Tersedia
-Manajemen Waktu,bisnis,Tersedia
-Kiat Sukses Berwirausaha,bisnis,Tersedia
-Investasi untuk Pemula,bisnis,Tersedia
-Strategi Digital Marketing,bisnis,Tersedia
-Pengembangan Karier,bisnis,Tersedia
+title,book_id,category,status,tanggal_peminjaman,tanggal_pengembalian,denda
+Naruto,,komik,Dipinjam,2024-12-25,2024-12-25,0
+Naruto,,komik,Tersedia,,,
+One Piece,,komik,Tersedia,,,
+Doraemon,,komik,Tersedia,,,
+Attack on Titan,,komik,Tersedia,,,
+Death Note,,komik,Tersedia,2024-12-25,2024-12-29,5000
+Detective Conan,,komik,Tersedia,,,
+Captain Tsubasa,,komik,Tersedia,,,
+Tokyo Revenge,,komik,Tersedia,,,
+Harry Potter,,novel,Tersedia,,,
+To Kill a Mockingbird,,novel,Tersedia,2024-12-25,2024-12-29,5000
+The Great Gatsby,,novel,Tersedia,,,
+Pride and Prejudice,,novel,Tersedia,,,
+1984,,novel,Tersedia,,,
+Bumi Manusia,,novel,Tersedia,,,
+Matematika Dasar,,pelajaran,Tersedia,,,
+Kimia Organik,,pelajaran,Tersedia,,,
+Fisika untuk Pemula,,pelajaran,Tersedia,,,
+Sejarah Dunia,,pelajaran,Tersedia,,,
+Bahasa Inggris Dasar,,pelajaran,Tersedia,,,
+Teori Hukum dan Praktek Peradilan,,pelajaran,Tersedia,,,
+Python Programming,,teknologi,Tersedia,,,
+Machine Learning for Dummies,,teknologi,Tersedia,,,
+Artificial Intelligence,,teknologi,Tersedia,,,
+Web Development Basics,,teknologi,Tersedia,,,
+Cybersecurity Essentials,,teknologi,Tersedia,,,
+Healthy Living,,kesehatan,Tersedia,,,
+Panduan Gizi Seimbang,,kesehatan,Tersedia,,,
+Yoga untuk Pemula,,kesehatan,Tersedia,,,
+Mengenal Penyakit Umum,,kesehatan,Tersedia,,,
+Kebugaran Harian,,kesehatan,Tersedia,,,
+Kesehatan Mental(perspektif Psikologis dan Agama),,kesehatan,Tersedia,,,
+Rahasia Tubuh Sehat di Usia Senja,,kesehatan,Tersedia,,,
+Nutrisi untuk Hidup Lebih Lama dan Lebih Sehat,,kesehatan,Tersedia,,,
+Dasar Ilmu Kesehatan Masyarakat,,kesehatan,Tersedia,,,
+Kesehatan Reproduksi,,kesehatan,Tersedia,,,
+Bahaya Gula: Dampaknya Pada Tubuh Anda,,kesehatan,Tersedia,,,
+Manajemen Waktu,,bisnis,Tersedia,,,
+Kiat Sukses Berwirausaha,,bisnis,Tersedia,,,
+Investasi untuk Pemula,,bisnis,Tersedia,,,
+Strategi Digital Marketing,,bisnis,Tersedia,,,
+Pengembangan Karier,,bisnis,Tersedia,,,
+The Lean Startup,,bisnis,Tersedia,,,
+Pengantar Bisnis,,bisnis,Tersedia,,,
