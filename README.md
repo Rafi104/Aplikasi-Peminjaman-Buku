@@ -4,7 +4,6 @@
 2. Ryan Hafidz Setiyawan (I0324025)
 3. Via Dian Restuana (I0324026)
 # Deskripsi
-<<<<<<< HEAD
 Peminjaman buku perpustakaan adalah platform yang memudahkan pengguna untuk mencari, meminjam, mendata, dan mengembalikan buku yang kita pinjam secara online.
 1. mahasiswa memasukkan identitas
 2. setelah menyelesaikan pendataan identitas, mahasiswa menginput judul buku ke dalam halaman pencarian aplikasi peminjam buku
@@ -22,7 +21,6 @@ Peminjaman buku perpustakaan adalah platform yang memudahkan pengguna untuk memi
 6. Data mahasiswa akan tersimpan di laman admin peminjaman buku
 7. Mahasiswa mengembalikan buku yang nantinya akan muncul jumlah denda apabila melewati estimasi
 8. Selesai
->>>>>>> 09c82c0ff3bd5f77929d2e10963b7d669def0e06
 # Fitur Aplikasi
 1. Daftar buku berdasarkan kategori yang tersedia
 2. Pinjam buku
@@ -35,8 +33,5 @@ Peminjaman buku perpustakaan adalah platform yang memudahkan pengguna untuk memi
 # Library
 - Tkinter
 - Pandas
-<<<<<<< HEAD
-=======
 - os
->>>>>>> 09c82c0ff3bd5f77929d2e10963b7d669def0e06
 
