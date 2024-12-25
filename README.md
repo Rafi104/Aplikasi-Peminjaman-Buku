@@ -9,18 +9,8 @@ Peminjaman buku perpustakaan adalah platform yang memudahkan pengguna untuk menc
 2. setelah menyelesaikan pendataan identitas, mahasiswa menginput judul buku ke dalam halaman pencarian aplikasi peminjam buku
 3. setelah memilih buku, mahasiswa mengonfirmasi peminjaman
 4. lalu mahasiswa diarahkan ke halaman yang berisi estimasi peminjaman buku, dan juga menyetujui jika melewati tenggat akan dikenai denda oleh perpustakaan
-5. data mahasiswa akan tersimpan di laman admin peminjaman buku, odengan estimasi waktu peminjamannya juga
+5. data mahasiswa akan tersimpan di laman admin peminjaman buku, dengan estimasi waktu peminjamannya juga
 6. selesai
-=======
-Peminjaman buku perpustakaan adalah platform yang memudahkan pengguna untuk meminjam dan mengembalikan buku yang tersedia secara online dengan mudah.
-1. Mahasiswa mendaftarkan akun dengan nama lengkap, username, dan password di halaman register
-2. Mahasiswa login dengan username dan password yang telah di buat
-3. Setelah menyelesaikan pendataan identitas, mahasiswa menginput judul buku yang diinginkan ke dalam halaman pencarian aplikasi peminjam buku
-4. Setelah memilih buku, mahasiswa mengonfirmasi peminjaman buku yang berada di listbox
-5. Lalu mahasiswa diarahkan ke halaman yang berisi datetime peminjaman
-6. Data mahasiswa akan tersimpan di laman admin peminjaman buku
-7. Mahasiswa mengembalikan buku yang nantinya akan muncul jumlah denda apabila melewati estimasi
-8. Selesai
 # Fitur Aplikasi
 1. Daftar buku berdasarkan kategori yang tersedia
 2. Pinjam buku
