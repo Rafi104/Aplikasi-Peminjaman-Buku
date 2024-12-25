@@ -3,12 +3,11 @@ from tkinter import messagebox, ttk
 import pandas as pd
 import os
 
-# Variabel global untuk menyimpan buku berdasarkan kategori
+
 books_by_category = {}
 book_status = {}
 csv_file = r"C:\Users\Rafi\Documents\Tubes prokom\Aplikasi-Peminjaman-Buku\data_buku.csv"
 
-# Fungsi untuk memuat buku berdasarkan kategori dari CSV
 def load_books_from_csv(csv_file):
     global books_by_category, book_status
     books_by_category = {}
@@ -32,7 +31,6 @@ def load_books_from_csv(csv_file):
 
     return books_by_category
 
-# Fungsi untuk menyimpan buku ke file CSV
 def save_books_to_csv(csv_file):
     if not isinstance(csv_file, str):
         raise ValueError(f"csv_file harus berupa string, tetapi ditemukan {type(csv_file)}")
@@ -49,7 +47,6 @@ def add_hover_effect(button):
     button.bind('<Enter>', lambda e: button.configure(bg='#F0F0F0'))
     button.bind('<Leave>', lambda e: button.configure(bg='white'))
 
-# Fungsi untuk membuat menu utama
 # Fungsi untuk membuat menu utama
 def create_home_menu(parent, frame):
     from pinjambuku import create_borrow_book_frame
@@ -68,7 +65,7 @@ def create_home_menu(parent, frame):
     welcome_frame.pack(fill="x", pady=(0, 30))
     tk.Label(
         welcome_frame,
-        text="Selamat Datang,",
+        text="Selamat Datang!",
         font=("Helvetica", 32, "bold"),
         bg='#E8F6F3',
         fg='#FF6B6B'
@@ -146,18 +143,17 @@ def create_home_menu(parent, frame):
 
 def update_book_list(event, book_listbox, selected_category):
     """Fungsi untuk memperbarui daftar buku berdasarkan kategori yang dipilih."""
-    selected = selected_category.get()  # Ambil kategori yang dipilih
-    book_listbox.delete(0, tk.END)  # Hapus daftar lama
+    selected = selected_category.get() 
+    book_listbox.delete(0, tk.END)  
 
     if selected == "Semua": 
-        # Menampilkan semua buku
         for category in books_by_category:
             for book in books_by_category[category]:
-                status = book_status.get(book, "Tersedia")  # Ambil status buku, default Tersedia
+                status = book_status.get(book, "Tersedia") 
                 book_listbox.insert(tk.END, f"{book} ({status})")
     elif selected in books_by_category:  # Jika kategori tertentu dipilih
         for book in books_by_category[selected]:
-            status = book_status.get(book, "Tersedia")  # Ambil status buku
+            status = book_status.get(book, "Tersedia") 
             book_listbox.insert(tk.END, f"{book} ({status})")  # Tampilkan judul dan status buku
 
 def create_book_category_frame(parent, frame):

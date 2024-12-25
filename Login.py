@@ -13,7 +13,6 @@ def create_form_entry(parent, label_text, is_password=False):
     return entry
 
 
-# Fungsi untuk pendaftaran
 def register(name_entry, username_entry, password_entry, parent,frame):
     from Main import show_frame
     """Logika untuk pendaftaran pengguna baru."""
@@ -56,7 +55,6 @@ def login(username_entry, password_entry, parent,frame):
         messagebox.showerror("Error", "Username tidak ditemukan!")
 
 
-# Fungsi untuk membuat frame registrasi
 def create_register_frame(parent,frame):
     from Main import show_frame
     """Frame registrasi."""
@@ -79,7 +77,7 @@ def create_register_frame(parent,frame):
     tk.Button(button_frame, text="DAFTAR", font=("Arial Bold", 14), bg="#2E86C1", fg="white", width=20, height=1,
               command=lambda: register(name_entry, username_entry, password_entry, parent,frame)).pack(pady=(0, 10))
     tk.Button(button_frame, text="SUDAH PUNYA AKUN? MASUK", font=("Arial", 12), bg="#95A5A6", fg="white", width=28, height=2,
-              command=lambda: show_frame(frame,create_login_frame(parent,frame))).pack()
+              command=lambda: show_frame(parent,create_login_frame(parent))).pack()
 
     return frame
 

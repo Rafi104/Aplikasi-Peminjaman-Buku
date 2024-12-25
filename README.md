@@ -5,7 +5,7 @@
 3. Via Dian Restuana (I0324026)
 # Deskripsi
 Peminjaman buku perpustakaan adalah platform yang memudahkan pengguna untuk mencari, meminjam, mendata, dan mengembalikan buku yang kita pinjam secara online.
-1. mahasiswa memasukkan identitas berupa data kartu pelajar ke dalam aplikasi peminjaman buku
+1. mahasiswa memasukkan identitas
 2. setelah menyelesaikan pendataan identitas, mahasiswa menginput judul buku ke dalam halaman pencarian aplikasi peminjam buku
 3. setelah memilih buku, mahasiswa mengonfirmasi peminjaman
 4. lalu mahasiswa diarahkan ke halaman yang berisi estimasi peminjaman buku, dan juga menyetujui jika melewati tenggat akan dikenai denda oleh perpustakaan
@@ -25,5 +25,4 @@ Peminjaman buku perpustakaan adalah platform yang memudahkan pengguna untuk menc
 # Library
 - Tkinter
 - Pandas
-- Pillow
 

@@ -4,9 +4,58 @@ from Main import show_frame
 from Book import create_home_menu
 from datetime import datetime  # Import datetime untuk mendapatkan tanggal peminjaman
 
+import tkinter as tk
+from tkinter import messagebox, ttk
+from datetime import datetime
+import csv
+
+# Fungsi untuk membaca data buku dari file CSV
+def read_books_from_csv(csv_file):
+    books = []
+    with open(csv_file, newline='', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            books.append(row)
+    return books
+
+# Fungsi untuk menyimpan data buku ke file CSV
+def save_books_to_csv(csv_file, books):
+    with open(csv_file, mode='w', newline='', encoding='utf-8') as file:
+        fieldnames = ['book_id', 'title', 'category', 'status', 'borrow_date']
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+        writer.writeheader()
+        for book in books:
+            writer.writerow(book)
+
+# Fungsi untuk memperbarui daftar buku yang ditampilkan di Listbox
+def update_book_list(book_listbox, selected_category, csv_file):
+    books = read_books_from_csv(csv_file)
+    book_listbox.delete(0, tk.END)  # Hapus daftar lama
+
+    # Filter buku berdasarkan kategori dan status
+    for book in books:
+        if selected_category == "Semua" or selected_category == book['category']:
+            if book['status'] == "Tersedia":
+                book_listbox.insert(tk.END, f"{book['title']} - ID: {book['book_id']}")
+
+# Fungsi untuk meminjam buku berdasarkan ID
+def borrow_book(selected_book_id, csv_file):
+    books = read_books_from_csv(csv_file)
+    
+    for book in books:
+        if book['book_id'] == selected_book_id:
+            if book['status'] == "Tersedia":
+                # Update status buku menjadi 'Tidak Tersedia'
+                book['status'] = "Tidak Tersedia"
+                book['borrow_date'] = datetime.now().strftime("%Y-%m-%d")
+                save_books_to_csv(csv_file, books)  # Simpan perubahan ke CSV
+                return True, book
+            else:
+                return False, book
+    return False, None  # Buku tidak ditemukan
+
+# Fungsi utama untuk membuat frame peminjaman buku
 def create_borrow_book_frame(parent, frame, csv_file="data_buku.csv"):
-    from Book import book_status, books_by_category
-    """Buat frame untuk daftar buku yang bisa dipinjam."""
     selected_category = tk.StringVar()  # Deklarasikan sebagai StringVar
     frame = tk.Frame(parent, bg="#E8F6F3")
     frame.pack(expand=True, fill="both", padx=20, pady=20)
@@ -31,28 +80,6 @@ def create_borrow_book_frame(parent, frame, csv_file="data_buku.csv"):
     book_listbox.pack(pady=20)
 
     # Menampilkan buku yang tersedia
-    def update_book_list():
-        """Fungsi untuk memperbarui daftar buku berdasarkan kategori yang dipilih."""
-        selected = selected_category.get()  # Ambil kategori yang dipilih
-        book_listbox.delete(0, tk.END)  # Hapus daftar lama
-
-        # Cek kategori yang dipilih dan tampilkan buku yang sesuai
-        if selected == "Dipinjam":  # Tampilkan buku yang tidak tersedia
-            for category in books_by_category:
-                for book in books_by_category[category]:
-                    if book_status.get(book) == "Tidak Tersedia":  # Buku dipinjam
-                        book_listbox.insert(tk.END, book)
-        elif selected == "Semua":  # Tampilkan semua buku yang tersedia
-            for category in books_by_category:
-                for book in books_by_category[category]:
-                    if book_status.get(book) == "Tersedia":  # Buku tersedia
-                        book_listbox.insert(tk.END, book)
-        else:  # Tampilkan buku berdasarkan kategori yang tersedia
-            if selected in books_by_category:
-                for book in books_by_category[selected]:
-                    if book_status.get(book) == "Tersedia":  # Buku tersedia
-                        book_listbox.insert(tk.END, book)
-
     def borrow_selected_book():
         """Fungsi untuk meminjam buku yang dipilih."""
         try:
@@ -61,28 +88,22 @@ def create_borrow_book_frame(parent, frame, csv_file="data_buku.csv"):
                 messagebox.showwarning("Peringatan", "Pilih buku terlebih dahulu!")
                 return
 
-            selected_book = book_listbox.get(selected_index)  # Ambil judul buku berdasarkan indeks
+            selected_item = book_listbox.get(selected_index)  # Ambil teks yang dipilih
+            title, book_id = selected_item.split(" - ID: ")  # Pisahkan judul dan ID
 
-            # Menyimpan tanggal peminjaman saat buku dipinjam
-            borrow_date = datetime.now().strftime("%Y-%m-%d")  # Mengambil tanggal hari ini
-            if borrow_book(selected_book, csv_file, borrow_date):  # Panggil fungsi borrow_book dengan tanggal peminjaman
-                # Perbarui tampilan Listbox setelah buku dipinjam
-                update_book_list()
+            # Panggil fungsi untuk meminjam buku berdasarkan ID
+            success, book = borrow_book(book_id, csv_file)
+
+            if success:
+                messagebox.showinfo("Sukses", f"Buku '{book['title']}' berhasil dipinjam pada {book['borrow_date']}!")
+            else:
+                messagebox.showerror("Gagal", f"Buku '{book['title']}' sedang tidak tersedia!")
+            
+            # Perbarui daftar buku
+            update_book_list(book_listbox, selected_category.get(), csv_file)
+
         except IndexError:
             messagebox.showwarning("Peringatan", "Pilih buku terlebih dahulu!")
-
-    def borrow_book(selected_book, csv_file, borrow_date):
-        from Book import save_books_to_csv
-        """Fungsi untuk meminjam buku yang dipilih."""
-        if book_status[selected_book] == "Tersedia":
-            book_status[selected_book] = "Tidak Tersedia"  # Mengubah status buku menjadi Tidak Tersedia
-            book_status[f"{selected_book}_tanggal_peminjaman"] = borrow_date  # Menyimpan tanggal peminjaman
-            save_books_to_csv(csv_file)  # Simpan perubahan ke file CSV
-            messagebox.showinfo("Sukses", f"Buku '{selected_book}' berhasil dipinjam pada {borrow_date}!")
-            return True  # Berhasil dipinjam
-        else:
-            messagebox.showerror("Gagal", f"Buku '{selected_book}' sedang tidak tersedia!")
-            return False  # Gagal dipinjam
 
     # Dropdown kategori
     category_frame = tk.Frame(frame, bg="#E8F6F3")
@@ -97,19 +118,23 @@ def create_borrow_book_frame(parent, frame, csv_file="data_buku.csv"):
 
     selected_category.set("Semua")  # Set kategori default "Semua"
 
-    selected_category = tk.StringVar()
     category_dropdown = ttk.Combobox(
         category_frame,
         textvariable=selected_category,
-        values=["Semua"] + list(books_by_category.keys()),  # Tambahkan opsi "Semua"
+        values=["Semua"],  # Kategori default
         state="readonly",
         font=("Arial", 12),
         width=30
     )
     category_dropdown.pack(side=tk.LEFT, padx=10)
 
+    # Update dropdown dengan kategori yang ada di file CSV
+    books = read_books_from_csv(csv_file)
+    categories = set(book['category'] for book in books)
+    category_dropdown['values'] = ["Semua"] + list(categories)
+
     # Hubungkan dropdown kategori dengan fungsi update
-    selected_category.trace("w", lambda *args: update_book_list())
+    selected_category.trace("w", lambda *args: update_book_list(book_listbox, selected_category.get(), csv_file))
 
     # Tombol untuk meminjam buku
     tk.Button(
@@ -134,7 +159,10 @@ def create_borrow_book_frame(parent, frame, csv_file="data_buku.csv"):
         width=25,
         height=2,
         cursor="hand2",
-        command=lambda: show_frame(parent, create_home_menu(parent,frame))
+        command=lambda: None  # Fungsi kembali ke menu utama
     ).pack(pady=20)
+
+    # Perbarui daftar buku awal
+    update_book_list(book_listbox, selected_category.get(), csv_file)
 
     return frame

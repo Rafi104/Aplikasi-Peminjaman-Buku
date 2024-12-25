@@ -49,7 +49,7 @@ def return_book(selected_book, csv_file):
                 return_date = datetime.now()  # Ambil tanggal pengembalian sekarang
 
                 # Hitung denda jika terlambat
-                max_borrow_days = 7
+                max_borrow_days = 3
                 overdue_days = (return_date - borrowed_date).days - max_borrow_days
                 if overdue_days > 0:
                     fine = overdue_days * 5000
@@ -58,8 +58,8 @@ def return_book(selected_book, csv_file):
                     fine = 0
 
                 # Update status buku
-                book_status[selected_book] = "Tersedia"  # Ubah status buku
-                book_status[f"{selected_book}_tanggal_pengembalian"] = return_date.strftime("%Y-%m-%d")  # Tanggal pengembalian
+                book_status[selected_book] = "Tersedia" 
+                book_status[f"{selected_book}_tanggal_pengembalian"] = return_date.strftime("%Y-%m-%d")  
                 book_status[f"{selected_book}_denda"] = fine  # Simpan denda
                 save_books_to_csv(csv_file)  # Simpan ke file CSV
 
